@@ -1,0 +1,175 @@
+<!-- <php>$bdd = new PDO('mysql:host=54.36.91.62;dbnameftp.cluster027.hosting.ovh.net', 'sdfgann', 'SDFgang08993')</php> -->
+
+
+
+
+<html>
+	<head>
+		<title>Connexion</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../inscription/Inscription.css">
+
+  
+</head>
+<body>
+
+    
+
+    <div id="universe"></div>
+
+    <script>
+        var layerCount = 5;
+var starCount = 400;
+var maxTime = 30;
+var universe = document.getElementById("universe");
+var w = window;
+var d = document;
+var e = d.documentElement;
+var g = d.getElementsByTagName("body")[0];
+var width = w.innerWidth || e.clientWidth || g.clientWidth;
+var height = w.innerHeight || e.clientHeight || g.clientHeight;
+for (var i = 0; i < starCount; ++i) {
+var ypos = Math.round(Math.random() * height);
+var star = document.createElement("div");
+var speed = 1000 * (Math.random() * maxTime + 1);
+star.setAttribute("class", "star" + (3 - Math.floor(speed / 1000 / 8)));
+star.style.backgroundColor = "white";
+
+universe.appendChild(star);
+star.animate(
+[
+  {
+    transform: "translate3d(" + width + "px, " + ypos + "px, 0)"
+  },
+  {
+    transform:
+      "translate3d(-" + Math.random() * 256 + "px, " + ypos + "px, 0)"
+  }
+],
+{
+  delay: Math.random() * -speed,
+  duration: speed,
+  iterations: 1000
+}
+);
+}
+
+var elem = document.querySelector(".pulse");
+var animation = elem.animate(
+{
+opacity: [0.5, 1],
+transform: ["scale(0.5)", "scale(1)"]
+},
+{
+direction: "alternate",
+duration: 500,
+iterations: Infinity
+}
+);
+
+    </script>
+
+
+    <div align="center">
+        <p>inscription</p>
+        <br />
+        <form method="POST" action="">
+			
+       <table>
+		   <tr>
+	   <td align=right>
+		<label for="pseudo">Pseudo :</label> 
+       </td>
+	   <td >
+            <input type="text"
+            placeholder="Votre pseudo"
+			id="pseudo"
+            name="pseudo" />
+       </td>
+</tr>
+
+<tr>
+	   <td align=right >
+		<label for="mail">Mail :</label> 
+       </td>
+	   <td >
+            <input type="email"
+            placeholder="Votre mail"
+			id="mail"
+            name="mail" />
+       </td>
+</tr>
+
+<tr>
+	   <td  align=right>
+		<label for="mail2"> Confirmation du Mail :</label> 
+       </td>
+	   <td >
+            <input type="email"
+            placeholder="Confirmez votre mail"
+			id="mail2"
+            name="mail" />
+       </td>
+</tr>
+
+<tr>
+	   <td  align=right>
+		<label for="mdp"> Mot de passe :</label> 
+       </td>
+	   <td >
+            <input type="password"
+            placeholder="Votre mot de passe"
+			id="mdp"
+            name="mdp" />
+       </td>
+</tr>
+
+<tr>
+	   <td  align=right>
+		<label for="mdp2"> Confirmation du mot de passe :</label> 
+       </td>
+	   <td >
+            <input type="password"
+            placeholder="Confirmez votre mdp"
+			id="mdp2"
+            name="mdp2" />
+       </td>
+</tr>
+<tr>
+<td> </td>
+<td align=center> 
+	<br>
+    <a>
+	<input type="button" value="Je m'inscris"/>
+</a>
+
+    <a href="../formulaire d'inscription/formulaire.html">
+    <input type="button" value="Je me connect"/>
+    
+</a>
+
+</br>
+</td>
+ 
+</tr>
+</table>
+<br />
+
+
+        </form>
+       
+          
+        </td>
+       
+        <div class="drop drop-2"></div>
+        <div class="drop drop-3"></div>
+        <div class="drop drop-4"></div>
+        <div class="drop drop-5"></div>
+        </div>
+    </div>
+
+
+    
+    
+</body>
+</html>
